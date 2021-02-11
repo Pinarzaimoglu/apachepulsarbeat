@@ -1,2 +1,2 @@
 # apachepulsarbeat
-Collet metris from Apache Pulsar
+Collet metrics from Apache Pulsar
