@@ -1,0 +1,247 @@
+- name: namespace 
+  type: group
+  description: >
+    Broker namespace metrics from the Apache Pulsar v2
+  release: beta  
+  fields:
+    - name: entry_size_le_128
+      type: byte
+      description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_512
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_1_kb
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_2_kb
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_4_kb
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_16_kb
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_100_kb
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_1_mb
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: entry_size_le_overflow
+      type:
+        description: >
+        The entry rate of a namespace that the entry size is smaller with a given threshold.
+    - name: producers_count
+      type:
+        description: >
+        The number of active producers of the namespace connected to this broker.
+    - name: rate_in
+      type:
+        description: >
+        The total message rate of the namespace coming into this broker (messages/second).
+    - name: rate_out
+      type:
+        description: >
+        The total message rate of the namespace going out from this broker (messages/second).
+    - name: replication_backlog
+      type:
+        description: >
+        The total backlog of the namespace replicating to remote cluster (messages).
+    - name: replication_rate_in
+      type:
+        description: >
+        The total message rate of the namespace replicating from remote cluster (messages/second).
+    - name: replication_rate_out
+      type:
+        description: >
+        The total message rate of the namespace replicating to remote cluster (messages/second).
+    - name: replication_throughput_in
+      type:
+        description: >
+        The total throughput of the namespace replicating from remote cluster (bytes/second).
+    - name: replication_throughput_out
+      type:
+        description: >
+        The total throughput of the namespace replicating to remote cluster (bytes/second).
+    - name: subscriptions_count
+      type:
+        description: >
+        The number of Pulsar subscriptions of the namespace served by this broker.
+    - name: throughput_in
+      type:
+        description: >
+        The total throughput of the namespace coming into this broker (bytes/second).
+    - name: throughput_out
+      type:
+        description: >
+        The total throughput of the namespace going out from this broker (bytes/second).
+    - name: topics_count
+      type:
+        description: >
+        The number of Pulsar topics of the namespace owned by this broker.
+    - name: consumers_count
+      type:
+        description: >
+        The number of active consumers of the namespace connected to this broker.
+
+- name: topic
+  type: group
+  description: >
+    Broker topics metrics from the Apache Pulsar v2
+  release: beta
+  fields:          
+    - name: in_bytes_total
+      type:
+        description: >
+          The total number of bytes received for this topic
+    - name: in_messages_total
+      type:
+        description: >
+          The total number of messages received for this topic
+    - name: out_messages_total
+      type:
+        description: >
+          The total number of bytes read from this topic
+    - name: out_bytes_total
+      type:
+        description: >
+          The total number of bytes read from this topic
+    - name: storage_backlog_quota_limit
+      type:
+        description: >
+          The total amount of the data in this topic that limit the backlog quota (bytes).
+    - name: storage_backlog_size
+      type:
+        description: >
+          The total backlog size of the topics of this topic owned by this broker (messages).
+    - name: storage_read_rate
+      type:
+        description: >
+          The total message batches (entries) read from the storage for this topic (message batches / second).
+    - name: storage_offloaded_size
+      type:
+        description: >
+          The total amount of the data in this topic offloaded to the tiered storage (bytes).
+    - name: storage_size
+      type:
+        description: >
+          The total storage size of the topics in this topic owned by this broker (bytes).
+    - name: storage_write_latency_le_0_5
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_1
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_5
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_10
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_20
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_50
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_100
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_200
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_1000
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_latency_le_overflow
+      type:
+        description: >
+          The entry rate of a topic that the storage write latency is smaller with a given threshold.
+    - name: storage_write_rate
+      type:
+        description: >
+          The total message batches (entries) written to the storage for this topic (message batches / second).
+
+- name: subscription 
+  type: group
+  description: >
+    Broker subscription metrics from the Apache Pulsar v2
+  release: beta
+  fields:
+    - name: back_log
+      type:
+        description: >
+          The total backlog of a subscription (messages).
+    - name: blocked_on_unacked_messages
+      type:
+        description: >
+          Indicate whether a subscription is blocked on unacknowledged messages or not. 
+    - name: delayed
+      type:
+        description: >
+          The total number of messages are delayed to be dispatched for a subscription (messages).
+    - name: msg_rate_out
+      type:
+        description: >
+          The total message dispatch rate for a subscription (messages/second).
+    - name: msg_rate_redeliver
+      type:
+        description: >
+          The total message rate for message being redelivered (messages/second).
+    - name: msg_throughput_out
+      type:
+        description: >
+          The total message dispatch throughput for a subscription (bytes/second).
+    - name: unacked_message
+      type:
+        description: >
+          The total number of unacknowledged messages of a subscription (messages).
+
+- name: consumer
+  type: group
+  description: >
+    Broker consumer metrics from the Apache Pulsar v2
+  release: beta
+  fields:
+    - name: available_permits
+      type:
+        description: >
+          The available permits for for a consumer.
+    - name: msg_throughput_out
+      type:
+        description: >
+          The total message dispatch throughput for a consumer (bytes/second).
+    - name: msg_rate_out
+      type:
+        description: >
+          The total message dispatch rate for a consumer (messages/second).
+    - name: blocked_on_unacked_messages
+      type:
+        description: >
+          Indicate whether a consumer is blocked on unacknowledged messages or not. 
+    - name: unacked_messages
+      type:
+        description: >
+          The total number of unacknowledged messages of a consumer (messages).
+    - name: msg_rate_redeliver
+      type:
+        description: >
+          The total message rate for message being redelivered (messages/second).
