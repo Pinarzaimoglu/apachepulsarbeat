@@ -1,0 +1,10 @@
+- key: apachepulsar
+  title: "apachepulsar"
+  release: beta
+  description: >
+    apachepulsar module
+  fields:
+    - name: apachepulsar
+      type: group
+      description: >
+      fields:
